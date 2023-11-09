@@ -3,39 +3,23 @@
 //จงเขียนโปรแกรมที่ไว้ใช้ถอดรหัสของนายโรเบิร์ด
 // ตัวอย่าง input: zepelepenapa papapripikapa > zelena paprika \\ input: bapas jepe doposapadnapa opovapa kepeminipijapa > bas je dosadna ova kemija
 
-
-
-// let input = 'aaeiou'
-let input = 'kepemipijapa'
-const collect = [];
-const collectStr = '';
-
-for (let i = 0; i < input.length; i++) {
-    let letterI = input[i]
-    // console.log(input[i]);
-    // console.log(lletterI);
-    if (letterI === 'a') {
-        // console.log('a');
-        letterI = 'apa';
-    } else if (letterI === 'e') {
-        letterI = 'epe';
-        // console.log('e');
-    } else if (letterI === 'i') {
-        letterI = 'ipi';
-        // console.log('i');
-
-    } else if (letterI === 'o') {
-        letterI = 'opo';
-        // console.log('o');
-
-    } else if (letterI === 'u') {
-        letterI = 'upu';
-        // console.log('u');
-
-    } else {
-
+const collectF = [];
+function tranWord(input) {
+    console.log(input);
+    let collect = ''
+    for (let i = 0; i < input.length; i++) {
+        let alp = input[i]
+        // console.log(alp);
+        if (['a', 'e', 'i', 'o', 'u'].includes(alp)) { // true
+            collect += alp;
+            i += 2
+        } else {
+            collect += alp;
+        }
     }
-    // console.log(letterI);
-    collect.push(letterI);
+    collectF.push(collect);
+    return collect;
 }
-console.log(collect.join(''));
+console.log(tranWord('kepemipijapa'));
+console.log(tranWord('papapripikapa'));
+console.log(collectF);
