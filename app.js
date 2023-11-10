@@ -21,5 +21,7 @@ function tranWord(input) {
     return collect;
 }
 console.log(tranWord('kepemipijapa'));
+console.log(tranWord('bapas jepe doposapadnapa opovapa kepeminipijapa'));
+console.log(tranWord('zepelepenapa papapripikapa > zelena paprika'));
 console.log(tranWord('papapripikapa'));
 console.log(collectF);
